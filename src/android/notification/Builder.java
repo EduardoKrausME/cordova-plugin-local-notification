@@ -27,9 +27,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationCompat.MessagingStyle.Message;
-import android.support.v4.media.app.NotificationCompat.MediaStyle;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationCompat.MessagingStyle.Message;
 import android.support.v4.media.session.MediaSessionCompat;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -375,9 +374,9 @@ public final class Builder {
      */
     private void applyMediaStyle(NotificationCompat.Builder builder,
                                  MediaSessionCompat.Token token) {
-        MediaStyle style;
+        androidx.media.app.NotificationCompat.MediaStyle style;
 
-        style = new MediaStyle(builder)
+        style = new androidx.media.app.NotificationCompat.MediaStyle (builder)
                 .setMediaSession(token)
                 .setShowActionsInCompactView(1);
 
